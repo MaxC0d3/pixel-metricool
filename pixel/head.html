@@ -1,11 +1,26 @@
 <script>
-  (function() {
+  (function () {
     var appId = "{{settings.gtmId}}";
     if (!appId) {
       console.error('Warning: No APP NAME ID is defined. Please configure it in the apps admin.');
       return
     }
-
-    // Add script here
   })()
 </script>
+
+
+<script>function loadScript(a) { var b = document.getElementsByTagName("head")[0], c = document.createElement("script"); c.type = "text/javascript", c.src = "https://tracker.metricool.com/resources/be.js", c.onreadystatechange = a, c.onload = a, b.appendChild(c) } loadScript(function () { beTracker.t({ hash: "3acacdc0e723c71ee0e995031b49922b" }) });</script>
+
+<div class="pixel-metricool">
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      var scripts = document.getElementsByTagName('script');
+
+      for (let script of scripts) {
+        if (!script) {
+          document.createElement('div').classList.add('pixel-no-render')
+        }
+      }
+    })
+  </script>
+</div>
